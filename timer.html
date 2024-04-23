@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>勉強タイマー</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+</head>
+
+<body>
+	<div id="container">
+		<div id="top_control">
+			<!--
+			<button id="closeBtn">
+				<i class="fa-solid fa-xmark"></i>
+			</button>
+			-->
+			<div id="volume">
+				<i class="fa-solid fa-volume-high"></i>
+				<input type="range" id="volume_slider">
+			</div>
+			<div id="subject">
+				<i class="fa-solid fa-book"></i>
+				<select id="subject_list">
+					<option value="">---</option>
+					<option value="chemical">化学</option>
+					<option value="physics">物理</option>
+					<option value="math">数学</option>
+					<option value="english">英語</option>
+					<option value="society">社会</option>
+					<option value="japanese">国語</option>
+					<option value="it">IT</option>
+					<option value="research">課研</option>
+					<option value="mcdonald">マック</option>
+				</select>
+			</div>
+		</div>
+		<div id="timer">
+			<div id="time">
+				00:00:00
+			</div>
+		</div>
+		<div id="bottom_control">
+			<button id="pauseBtn">スタート</button>
+			<button id="resetBtn">リセット</button>
+			<button id="submitBtn">完了</button>
+		</div>
+	</div>
+</body>
+</html>

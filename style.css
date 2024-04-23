@@ -1,0 +1,154 @@
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	border: none;
+	background: none;
+	font-size: clamp(0.7rem, 4vw, 1rem);
+	cursor: pointer;
+}
+
+select {
+	cursor: pointer;
+}
+
+i {
+	color: #757575;
+}
+
+#container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+#top_control {
+	padding: 1rem;
+	box-shadow: 0px 2px 4px #ccc;
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+
+#closeBtn > i {
+	font-size: 1.5rem;
+}
+
+#volume {
+	display: flex;
+	gap: 5px;
+}
+
+#subject {
+	display: flex;
+	gap: 10px;
+}
+
+#volume_slider {
+	-webkit-appearance: none;
+	appearance: none;
+	outline: none;
+	background: transparent;
+	cursor: pointer;
+}
+
+#volume_slider::-webkit-slider-runnable-track {
+	background: #e2eefc;
+	height: 4px;
+	border-radius: 4px;
+}
+
+#volume_slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	height: 15px;
+	width: 15px;
+	margin-top: -5px; /* 位置の調整が必要 */
+	background-color: #3478f5;
+	border-radius: 50%;
+}
+
+#volume_slider::-moz-range-track {
+	background: #e2eefc;
+	height: 4px;
+	border-radius: 4px;
+}
+
+#volume_slider::-moz-range-thumb {
+	border: none;
+	height: 10px;
+	width: 10px;
+	background-color: #3478f5;
+	border-radius: 50%;
+}
+
+#subject_list {
+	border: none;
+	outline: none;
+	padding: 0 15px 0 3px;
+}
+
+#timer {
+	display: flex;
+	flex-grow: 1;
+	align-items: center;
+	justify-content: center;
+}
+
+#time {
+	font-size: clamp(4rem, 10vh, 5vw);
+	color: #757575;
+}
+
+#bottom_control {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: clamp(0.7rem, 4vw, 1rem);
+	margin-bottom: 3rem;
+	padding: 0 1rem;
+}
+
+#pauseBtn {
+	background-color: #3478f5;
+	border-radius: 4px;
+	width: 100%;
+	color: #fff;
+	padding: calc(clamp(0.7rem, 4vw, 1rem) * 0.6) 0;
+	box-shadow: 0px 2px 4px #ccc;
+}
+
+#resetBtn, #submitBtn {
+	padding: 7px 0;
+	color: #3478f5;
+	position: relative;
+	flex-grow: 1;
+}
+
+#resetBtn::after, #submitBtn::after {
+	background: #e2eefc;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 100%;
+	transform: scale(0, 1);
+	transform-origin: center top;
+	transition: .05s cubic-bezier(0.45, 0, 0.55, 1);
+	z-index: -1;
+}
+
+#resetBtn:hover::after, #submitBtn:hover::after {
+	transform: scale(1, 1);
+}
